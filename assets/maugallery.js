@@ -121,9 +121,13 @@
     },
     prevImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function() {
+      let found = false;
+      $($("img.gallery-item").get().reverse()).each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+          found = true;
+        } else if (found) {
           activeImage = $(this);
+          found = false;
         }
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
@@ -160,9 +164,13 @@
     },
     nextImage() {
       let activeImage = null;
+      let found = false;
       $("img.gallery-item").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+          found = true;
+        } else if (found) {
           activeImage = $(this);
+          found = false;
         }
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");

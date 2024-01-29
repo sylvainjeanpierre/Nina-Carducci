@@ -84,15 +84,14 @@ nav a {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	line-height: 1.2;
+	margin-bottom: 8px;
 }
-#about-me p {
+.about-me__paragraphe {
 	width: 80%;
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -136,6 +135,12 @@ nav a {
 	font-size: 24px;
 }
 
+.modal-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .quote {
 	font-family: 'Spectral';
 	font-style: italic;
@@ -147,8 +152,10 @@ nav a {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 2.5rem;
+	line-height: 1.2;
 }
+
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
@@ -255,7 +262,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me p {
 		width: 100%;
 	}
 }
